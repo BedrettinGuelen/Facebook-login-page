@@ -28,19 +28,21 @@ a:hover{
 /* ----Header---- */
 .header{
     grid-area: header;
+    margin-left: 17vw;
+    margin-top: 26%;
+    margin-right: 10%;
+    object-fit: cover;
 }
 
 .titel{
-    margin-top: 26%;
     font-size: 50px;
     font-weight: 900;
     color: var(--facebook-blue);
-    margin-left: 17vw; 
+     
 }
 
 .greeting{
     margin-top: -30px; 
-    margin-left: 17vw;
     font-size: 26px;
 }
 
@@ -54,7 +56,7 @@ a:hover{
     border-radius: 5px;
     margin-top: 18%;
     text-align: center;
-    width: auto;
+    width: 450px;
     margin-right: 17vw;
     padding: 5px;
     margin-bottom: 10px;
@@ -63,7 +65,7 @@ a:hover{
 #email{
     margin: 10px 10px 5px 10px;
     padding: 13px;
-    width: 300px;
+    width: 400px;
     font-size: 15px;
     border-radius: 10px;
 }
@@ -71,7 +73,7 @@ a:hover{
 #password{
     margin: 5px 10px 5px 10px;
     padding: 13px;
-    width: 300px;
+    width: 400px;
     font-size: 15px;
     border-radius: 10px;  
 }
@@ -79,7 +81,7 @@ a:hover{
 .log-in button{
     margin: 10px 10px 10px 10px;
     padding: 13px;
-    width: 330px;
+    width: 430px;
     font-size: 15px;
     border-radius: 10px;
     background: var(--facebook-blue);
@@ -100,7 +102,7 @@ hr{
 
 .hr1{
     margin-top: 15px;
-    width: 330px;
+    width: 430px;
 }
 
 .neu-konto{
@@ -120,7 +122,7 @@ hr{
 /* ----new-page---- */
 .new-page{
     grid-area: new-page;
-    width: 300px;
+    width: 400px;
     margin-right: 17vw;
     text-align: center;
     font-size: smaller;
@@ -141,6 +143,7 @@ footer{
     background-color: white;
 }
 
+
 .footer a{
     color: rgba(0,0,0,0.7);
     font-weight: normal;
@@ -157,6 +160,7 @@ footer{
 
 .fa-file-circle-info{
     background-color: black;
+
 }
 
 .footer p{
@@ -173,4 +177,47 @@ footer{
     'header new-page'
     'footer footer';
     justify-items: center;
+}
+
+
+
+@media (max-width: 1028px){
+    .container{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+        'header' 
+        'log-in'
+        'new-page'
+        'footer';
+        justify-items: center;
+        overflow-x: hidden;
+    }
+
+    .header{
+        margin-top: 18px;
+        margin-left: 15vw;
+        margin-right: 15vw;
+        text-align: center;
+        width: 450px;
+    }
+
+    .log-in{
+        margin-top: 18px;
+        margin-left: 15vw;
+        margin-right: 15vw;
+        width: 450px;
+    }
+
+    .new-page{
+        margin-left: 15vw;
+        margin-right: 15vw;
+    }
+
+    .footer{
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
 }
